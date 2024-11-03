@@ -2,23 +2,29 @@ package com.coderscampus;
 
 public class College {
 
-	private int studentID;
+	private String studentID;
 	private String studentName;
 	private String course;
 	private Integer grade;
 
-	public College(int studentID, String studentName, String course, Integer grade) {
+	public College(String studentID, String studentName, String course, Integer grade) {
 		this.studentID = studentID;
 		this.studentName = studentName;
 		this.course = course;
 		this.grade = grade;
 	}
 
-	public int getStudentID() {
+	@Override
+	public String toString() {
+		return "College [studentID=" + studentID + ", studentName=" + studentName + ", course=" + course + ","
+				+ " grade=" + grade + "]";
+	}
+
+	public String getStudentID() {
 		return studentID;
 	}
 
-	public void setStudentID(int studentID) {
+	public void setStudentID(String studentID) {
 		this.studentID = studentID;
 	}
 
