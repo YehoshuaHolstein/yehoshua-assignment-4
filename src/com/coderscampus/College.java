@@ -5,9 +5,9 @@ public class College {
 	private String studentID;
 	private String studentName;
 	private String course;
-	private Integer grade;
+	private String grade;
 
-	public College(String studentID, String studentName, String course, Integer grade) {
+	public College(String studentID, String studentName, String course, String grade) {
 		this.studentID = studentID;
 		this.studentName = studentName;
 		this.course = course;
@@ -44,11 +44,11 @@ public class College {
 		this.course = course;
 	}
 
-	public Integer getGrade() {
+	public String getGrade() {
 		return grade;
 	}
 
-	public void setGrade(Integer grade) {
+	public void setGrade(String grade) {
 		this.grade = grade;
 	}
 
