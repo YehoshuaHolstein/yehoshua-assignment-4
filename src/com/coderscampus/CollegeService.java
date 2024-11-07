@@ -8,9 +8,10 @@ import java.util.Comparator;
 
 public class CollegeService {
 
-	public void splitter(College[] masterCourse) throws IOException {
+	public CollegeServiceContainer splitter(College[] masterCourse) throws IOException {
 
 		String course;
+
 		College[] course1 = new College[33];
 		College[] course2 = new College[34];
 		College[] course3 = new College[33];
@@ -34,31 +35,7 @@ public class CollegeService {
 			}
 		}
 
-		// sort each array by grade desc : convert string grade -> Integer grade
-		String myStringGrade;
-		
-		for (College student : course1) {
-			myStringGrade = student.getGrade();
-			Integer myIntGrade = Integer.valueOf(myStringGrade);)
-		}
-		
-		Arrays.sort(masterCourse, new Comparator<College>() {
-
-			@Override
-			public int compare(College firstCourse, College secondCourse) {
-				if (firstCourse == null && secondCourse == null) {
-					return 0;
-				}
-				if (firstCourse == null) {
-					return 1;
-				}
-				if (secondCourse == null) {
-					return -1;
-				}
-				
-			return firstCourse.getCourse().compareTo(secondCourse.getCourse());
-			
-			}
-		}
+		CollegeServiceContainer collegeGraded = new CollegeServiceContainer(course1, course2, course3);
+		return collegeGraded;
 	}
 }

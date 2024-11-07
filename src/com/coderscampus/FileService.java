@@ -32,17 +32,17 @@ public class FileService {
 		Arrays.sort(masterCourse, new Comparator<College>() {
 
 			@Override
-			public int compare(College firstCourse, College secondCourse) {
-				if (firstCourse == null && secondCourse == null) {
+			public int compare(College firstGrade, College secondGrade) {
+				if (firstGrade == null && secondGrade == null) {
 					return 0;
 				}
-				if (firstCourse == null) {
+				if (firstGrade == null) {
 					return 1;
 				}
-				if (secondCourse == null) {
+				if (secondGrade == null) {
 					return -1;
 				}
-				return firstCourse.getCourse().compareTo(secondCourse.getCourse());
+				return secondGrade.getGrade().compareTo(firstGrade.getGrade());
 			}
 		});
 
