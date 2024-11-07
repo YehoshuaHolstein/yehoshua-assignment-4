@@ -23,7 +23,7 @@ public class CollegeService {
 		for (int i = 0; i < 100; i++) {
 			College collegeStudent = masterCourse[i];
 			course = collegeStudent.getCourse();
-			if (course.substring(0, 4).equals("APMTH")) {
+			if (course.substring(0, 4).equals("APMT")) {
 				course1[course1Index] = collegeStudent;
 				course1Index++;
 			} else if (course.substring(0, 4).equals("COMP")) {
