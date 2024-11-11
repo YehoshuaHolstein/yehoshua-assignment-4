@@ -2,54 +2,42 @@ package com.coderscampus;
 
 public class College {
 
-	private String studentID;
-	private String studentName;
-	private String course;
-	private String grade;
+	Student[] course1;
+	Student[] course2;
+	Student[] course3;
 
-	public College(String studentID, String studentName, String course, String grade) {
-		this.studentID = studentID;
-		this.studentName = studentName;
-		this.course = course;
-		this.grade = grade;
+	public College(Student[] course1, Student[] course2, Student[] course3) {
+		this.course1 = course1;
+		this.course2 = course2;
+		this.course3 = course3;
 	}
 
-	@Override
-	public String toString() {
-		return "College [studentID=" + studentID + ", studentName=" + studentName + ", course=" + course + ","
-				+ " grade=" + grade + "]";
+	public Student[] getCourse1() {
+		return course1;
 	}
 
-	public String getStudentID() {
-		return studentID;
+	public void setCourse1(Student[] course1) {
+		this.course1 = course1;
 	}
 
-	public void setStudentID(String studentID) {
-		this.studentID = studentID;
+	public Student[] getCourse2() {
+		return course2;
 	}
 
-	public String getStudentName() {
-		return studentName;
+	public void setCourse2(Student[] course2) {
+		this.course2 = course2;
 	}
 
-	public void setStudentName(String studentName) {
-		this.studentName = studentName;
+	public Student[] getCourse3() {
+		return course3;
 	}
 
-	public String getCourse() {
-		return course;
+	public void setCourse3(Student[] course3) {
+		this.course3 = course3;
 	}
 
-	public void setCourse(String course) {
-		this.course = course;
-	}
-
-	public String getGrade() {
-		return grade;
-	}
-
-	public void setGrade(String grade) {
-		this.grade = grade;
+	public Student[][] getCourses() {
+		return new Student[][] { course1, course2, course3 };
 	}
 
 }
