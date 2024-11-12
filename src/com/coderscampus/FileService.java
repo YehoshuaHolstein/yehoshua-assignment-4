@@ -28,7 +28,7 @@ public class FileService {
 			System.out.println("There was a problem: " + e.getMessage());
 		}
 
-		Comparator<Student> gradeComparator = Comparator.comparing(Student::getGrade,
+		Comparator<Student> gradeComparator = Comparator.comparing(Student::getgrade,
 				Comparator.nullsLast(Comparator.reverseOrder()));
 		Arrays.sort(masterCourse, gradeComparator);
 
@@ -41,8 +41,8 @@ public class FileService {
 		try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName + ".csv"))) {
 			writer.write("Student ID" + "," + "Student Name" + "," + "Course" + " ," + "Grade\n");
 			for (Student result : course) {
-				writer.write(result.getID() + "," + result.getName() + "," + result.getCourse() + ","
-						+ result.getGrade() + "\n");
+				writer.write(result.getid() + "," + result.getname() + "," + result.getcourse() + ","
+						+ result.getgrade() + "\n");
 			}
 		}
 	}

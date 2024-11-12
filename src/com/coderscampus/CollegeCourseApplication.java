@@ -16,7 +16,7 @@ public class CollegeCourseApplication {
 		College college = studentService.splitByCourse(students);
 
 		int i = 1;
-		for (Student[] courseList : college.getCourses()) {
+		for (Student[] courseList : college.getcourses()) {
 			fileService.write("course" + i, courseList);
 			i++;
 		}

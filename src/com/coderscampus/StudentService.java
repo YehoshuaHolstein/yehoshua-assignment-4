@@ -22,7 +22,7 @@ public class StudentService {
 
 		for (int i = 0; i < 100; i++) {
 			Student student = masterCourse[i];
-			course = student.getCourse();
+			course = student.getcourse();
 			if (course.startsWith("APMT")) {
 				course1[course1Index] = student;
 				course1Index++;
